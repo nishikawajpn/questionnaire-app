@@ -1,0 +1,43 @@
+// clearfix
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// 親セレクタのclass名を変えるselector-replace関数。
+@mixin replace($original, $replacement) {
+  @at-root {
+    #{selector-replace(&, $original, $replacement)} {
+      @content;
+    }
+  }
+}
+
+// リストに矢印を付ける。
+@mixin linkIcon($color: #333) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    margin-top: -7px;
+    border-top: 3px solid $color;
+    border-right: 3px solid $color;
+    transform: rotate(45deg);
+  }
+}
+
+// retina対応の画像のサイズ計算
+@mixin bg_size($w, $h: auto) {
+  @if $h == auto {
+    background-size: round($w / 2) + px $h;
+  }
+  @else {
+    background-size: round($w / 2) + px round($h / 2) + px;
+  }
+}

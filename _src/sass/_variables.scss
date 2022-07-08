@@ -1,0 +1,34 @@
+@charset "UTF-8";
+// ====================================
+// サイトの基本設定
+// ====================================
+
+// 幅関係の設定 -------------------------
+$width-base: 1200px;
+// $width-main: 800px;
+// $width-side: 360px;
+
+// フォント関係の設定 -------------------------
+$font-base: 'M PLUS Rounded 1c', sans-serif;
+// $font-serif: "Yu Mincho", serif;
+
+// 色関係の設定 -------------------------
+// サイトカラー
+$color-base: #f9fbfe;
+$color-main: #3385ff;
+$color-accent: #82a7ff;
+$color-success: #33d499;
+$color-error: #ff3333;
+$color-inactive: #d3d3d3;
+
+// フォントカラー
+$color-font: #6B7280;
+
+// リンクカラー
+// $color-link: #ff8c28;
+
+// ブレイクポイント -------------------------
+$breakpoints: (
+  sp: "screen and (max-width: 599px)",
+  pc: "screen and (min-width: 600px)",
+);
