@@ -1,6 +1,6 @@
 <?php
 define('CURRENT_URI', $_SERVER['REQUEST_URI']);
-define('BASE_CONTEXT_PATH', '/pollapp/');
+define('BASE_CONTEXT_PATH', '/questionnaire-app-main/');
 
 define('BASE_IMAGE_PATH', BASE_CONTEXT_PATH . 'assets/img/');
 define('BASE_JS_PATH', BASE_CONTEXT_PATH . 'assets/js/');

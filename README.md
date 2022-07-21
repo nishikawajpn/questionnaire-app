@@ -26,12 +26,27 @@ pip install huga_package
 
 # Usage
 
-下記ファイルへ、DB情報（ホスト・DB名・ユーザー名・パスワードなど）を入力してください。
-/php/db/datasource.php
+##　DBを用意する。
+
+php/db/datasource.phpファイルへ、DB情報（ホスト・DB名・ユーザー名・パスワードなど）を入力してください。
 
 必要に応じて、DSN（データソース名）も変更してください。
 
-テストデータが必要な場合は、data.sqlファイルのSQLをご使用ください。
+テストデータは、data.sqlファイルのSQLをご利用ください。
+
+## ルートディレクトリを設定する。
+
+config.phpの定数「BASE_CONTEXT_PATH」に、ルートディレクトリ名を指定します。
+
+```bash
+define('BASE_CONTEXT_PATH', '/ルートディレクトリ名/');
+```
+
+.htaccessのエントリーポイントの設定にて、ルートディレクトリを指定します。
+
+```bash
+RewriteRule .? /ルートディレクトリ名/index.php
+```
 
 # Note
 
