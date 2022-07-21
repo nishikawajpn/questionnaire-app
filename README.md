@@ -50,7 +50,7 @@ define('BASE_CONTEXT_PATH', '/ルートディレクトリ名/');
 RewriteRule .? /ルートディレクトリ名/index.php
 ```
 
-# Note
+## (3)CSSを編集したいとき
 
 CSSの編集は、_src/sass/内のscssファイルで行い、gulp.jsでコンパイルして、assets/css/内に出力されます。
 
