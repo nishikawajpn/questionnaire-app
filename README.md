@@ -1,62 +1,69 @@
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
+# アンケートアプリ
 
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
+選択形式のアンケート（最大10択）をつくったり、回答したり、コメントを投稿したりできるアプリケーションです。
 
-"hoge"が何かを簡潔に紹介する
+<!-- # DEMO
 
-# DEMO
-
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる -->
 
 # Features
 
-"hoge"のセールスポイントや差別化などを説明する
+アンケートに回答すると、即座に選択肢ごとの割合を表示します。未回答時、この数字は見えません。
 
-# Requirement
-
-"hoge"を動かすのに必要なライブラリなどを列挙する
+<!-- # Requirement
 
 * huga 3.5.2
-* hogehuga 1.0.2
+* hogehuga 1.0.2 -->
 
-# Installation
+<!-- # Installation
 
 Requirementで列挙したライブラリなどのインストール方法を説明する
 
 ```bash
 pip install huga_package
-```
+``` -->
 
 # Usage
 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
+下記ファイルへ、DB情報（ホスト・DB名・ユーザー名・パスワード）を入力してください。
+/php/db/datasource.php
 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
+必要に応じて、DSN（データソース名）も変更してください。
+
+テストデータのSQLは、data.sqlファイルに記載しています。
 
 # Note
 
-注意点などがあれば書く
+CSSの編集は、/_src/sass/内のscssファイルで行い、gulp.jsでコンパイルして、/assets/css/内に出力されます。
 
-# Author
+CSSを編集する場合、まずは必要なパッケージをインストールします。
+
+```bash
+npm install
+```
+
+次に、gulp.jsでコンパイルします。
+
+```bash
+gulp release
+```
+
+<!-- # Author
 
 作成情報を列挙する
 
 * 作成者
 * 所属
-* E-mail
+* E-mail -->
 
-# License
+<!-- # License
 ライセンスを明示する
 
 "hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 社内向けなら社外秘であることを明示してる
 
-"hoge" is Confidential.
+"hoge" is Confidential. -->
 
 
 
