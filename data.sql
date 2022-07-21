@@ -59,7 +59,7 @@ START TRANSACTION;
 SET time_zone = "+09:00";
 
 INSERT INTO `users` (`id`, `pwd`, `nickname`, `del_flg`) VALUES
-('test1', '$2y$10$n.PPvod4ai0r0qpqn5DurenOoxTyRhvef3S7DxoMu5BLRspG5oiBK', 'テストユーザー1', 0),
+('test', '$2y$10$n.PPvod4ai0r0qpqn5DurenOoxTyRhvef3S7DxoMu5BLRspG5oiBK', 'テストユーザー1', 0),
 ('test2', '$2y$10$n.PPvod4ai0r0qpqn5DurenOoxTyRhvef3S7DxoMu5BLRspG5oiBK', 'テストユーザー2', 0),
 ('test3', '$2y$10$n.PPvod4ai0r0qpqn5DurenOoxTyRhvef3S7DxoMu5BLRspG5oiBK', 'テストユーザー3', 0),
 ('test4', '$2y$10$n.PPvod4ai0r0qpqn5DurenOoxTyRhvef3S7DxoMu5BLRspG5oiBK', 'テストユーザー4', 0),
@@ -67,10 +67,10 @@ INSERT INTO `users` (`id`, `pwd`, `nickname`, `del_flg`) VALUES
 ('test6', '$2y$10$n.PPvod4ai0r0qpqn5DurenOoxTyRhvef3S7DxoMu5BLRspG5oiBK', 'テストユーザー6', 0);
 
 INSERT INTO `topics` (`id`, `title`, `published`, `views`, `user_id`, `del_flg`) VALUES
-(1, '血液型は何型ですか？', 1, 8, 'test1', 0),
-(2, '誕生日は何月ですか？', 1, 23, 'test1', 0),
-(3, '身長は何センチですか？', 1, 3, 'test1', 0),
-(4, '生まれ変わるなら男？女？', 1, 4, 'test1', 0);
+(1, '血液型は何型ですか？', 1, 8, 'test', 0),
+(2, '誕生日は何月ですか？', 1, 23, 'test', 0),
+(3, '身長は何センチですか？', 1, 3, 'test', 0),
+(4, '生まれ変わるなら男？女？', 1, 4, 'test', 0);
 
 INSERT INTO `choices` (`id`, `body`, `topic_id`, `del_flg`) VALUES
 (1, 'A型', 1, 0),
@@ -103,25 +103,25 @@ INSERT INTO `choices` (`id`, `body`, `topic_id`, `del_flg`) VALUES
 (28, '女 → 女', 4, 0);
 
 INSERT INTO `poll` (`id`,  `choice_id`, `topic_id`, `user_id`, `del_flg`) VALUES
-(1, 1, 1, 'test1', 0),
+(1, 1, 1, 'test', 0),
 (2, 3, 1, 'test2', 0),
 (3, 4, 1, 'test3', 0),
 (4, 2, 1, 'test4', 0),
 (5, 2, 1, 'test5', 0),
 (6, 2, 1, 'test6', 0),
-(7, 5, 2, 'test1', 0),
+(7, 5, 2, 'test', 0),
 (8, 7, 2, 'test2', 0),
 (9, 15, 2, 'test3', 0),
 (10, 13, 2, 'test4', 0),
 (11, 9, 2, 'test5', 0),
 (12, 15, 2, 'test6', 0),
-(13, 21, 3, 'test1', 0),
+(13, 21, 3, 'test', 0),
 (14, 22, 3, 'test2', 0),
 (15, 21, 3, 'test3', 0),
 (16, 20, 3, 'test4', 0),
 (17, 21, 3, 'test5', 0),
 (18, 20, 3, 'test6', 0),
-(19, 25, 4, 'test1', 0),
+(19, 25, 4, 'test', 0),
 (20, 26, 4, 'test2', 0),
 (21, 27, 4, 'test3', 0),
 (22, 28, 4, 'test4', 0),
@@ -129,19 +129,19 @@ INSERT INTO `poll` (`id`,  `choice_id`, `topic_id`, `user_id`, `del_flg`) VALUES
 (24, 25, 4, 'test6', 0);
 
 INSERT INTO `comments` (`id`, `body`,`topic_id`, `user_id`, `del_flg`) VALUES
-(1, 'A型です。', 1, 'test1', 0),
+(1, 'A型です。', 1, 'test', 0),
 (2, 'O型だよ。', 1, 'test2', 0),
 (3, 'AB型だと思う。', 1, 'test3', 0),
 (4, 'わからない。', 1, 'test4', 0),
 (5, 'たぶんB型。', 1, 'test6', 0),
 
-(6, '3月', 2, 'test1', 0),
+(6, '3月', 2, 'test', 0),
 (7, '1月生まれ。', 2, 'test2', 0),
 
 (8, '169cm！', 3, 'test3', 0),
 (9, '176cm (￣∇￣)', 3, 'test4', 0),
 (10, '来世は男がいい。', 4, 'test5', 0),
 (11, '女かな？', 4, 'test6', 0),
-(12, '次は男。', 4, 'test1', 0);
+(12, '次は男。', 4, 'test', 0);
 
 COMMIT;

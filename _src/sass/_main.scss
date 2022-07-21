@@ -25,6 +25,11 @@
   }
 }
 
+input[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 .button {
   text-decoration: none;
   display: inline-block;
@@ -266,10 +271,12 @@
     padding-right: 10px;
     position: relative;
     z-index: 1;
+    color: $color-font !important;
   }
   &__ratio {
     position: relative;
     z-index: 1;
+    color: $color-font !important;
   }
 
   &--polled {
