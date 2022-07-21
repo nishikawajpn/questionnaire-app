@@ -28,7 +28,7 @@ pip install huga_package
 
 DBとルートディレクトリについての設定が必要です。
 
-##　DBの設定
+## DBの設定
 
 php/db/datasource.phpファイルへ、DB情報（ホスト・DB名・ユーザー名・パスワードなど）を入力してください。
 
